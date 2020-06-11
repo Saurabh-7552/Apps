@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/matchParent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity">
+    <LinearLayout
+        style="@style/matchParent"
+        android:orientation="vertical">
+        <EditText
+            style="@style/Underneath"
+            android:id="@+id/Name"
+            android:inputType="text"
+            android:hint="Name"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            />
+        <TextView
+            style="@style/Underneath"
+            android:text="@string/Toppings"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="20dp"/>
+        <CheckBox
+            style="@style/Underneath"
+            android:id="@+id/topping1"
+            android:text="Wipped Cream"
+            android:paddingLeft="24dp"
+            android:layout_marginBottom="10dp"
+            />
+        <CheckBox
+            android:id="@+id/topping2"
+            style="@style/Underneath"
+            android:text="Chocolate"
+            android:paddingLeft="24dp"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            style="@style/Underneath"
+            android:text="@string/Quantity"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            style="@style/Underneath"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            >
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:text="@string/add"
+                android:textSize="24sp"
+                android:onClick="add_quantity"/>
+            <TextView
+                android:id="@+id/quantities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="24sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                />
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Subtract"
+                android:textSize="24sp"
+                android:onClick="subtract_quantity"/>
+
+        </LinearLayout>
+        <TextView
+            style="@style/Underneath"
+            android:text="@string/Price"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Order"
+            android:layout_marginLeft="16dp"
+            android:onClick="displaySummary"/>
+
+    </LinearLayout>
+</ScrollView>

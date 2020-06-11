@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cafeteria</string>
+    <string name="add">+</string>
+    <string name="Subtract">-</string>
+    <string name="Order">Order</string>
+    <string name="Toppings">Toppings</string>
+    <string name="Quantity">Quantity</string>
+    <string name="Price">Order for $5 each!</string>
+</resources>
