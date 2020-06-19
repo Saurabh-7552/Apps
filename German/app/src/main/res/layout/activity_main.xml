@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.german.MainActivity"
+     android:layout_height="match_parent"
+      android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/numbers"
+            style="@style/CategoryStyle"
+            android:background="@color/category_numbers"
+            android:text="@string/category_numbers" />
+
+        <TextView
+            android:id="@+id/family"
+            style="@style/CategoryStyle"
+            android:background="@color/category_family"
+            android:text="@string/category_family" />
+
+        <TextView
+            android:id="@+id/colors"
+            style="@style/CategoryStyle"
+            android:layout_marginBottom="16dp"
+            android:background="@color/category_colors"
+            android:text="@string/category_colors" />
+
+        <TextView
+            android:id="@+id/phrases"
+            style="@style/CategoryStyle"
+            android:background="@color/category_phrases"
+            android:text="@string/category_phrases" />
+
+        <TextView
+            android:id="@+id/Days"
+            style="@style/CategoryStyle"
+            android:background="@color/category_days"
+            android:text="@string/category_days" />
+
+        <TextView
+            android:id="@+id/Intro"
+            style="@style/CategoryStyle"
+            android:background="@color/category_intro"
+            android:text="@string/category_intro" />
+        <ImageView
+            android:id="@+id/imageAndroid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher_round"
+            style="@style/CategoryStyle"/>
+
+
+    </LinearLayout>
+</ScrollView>
