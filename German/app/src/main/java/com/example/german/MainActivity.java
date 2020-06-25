@@ -77,10 +77,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         ////////////////////////////////////////////////////////////////////////////
-        final ImageView myImage=(ImageView)findViewById(R.id.imageAndroid);
+         final ImageView myImage=(ImageView)findViewById(R.id.imageAndroid);
         myImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(view.getContext()," Best Painting In German",Toast.LENGTH_LONG);
                 myImage.setImageResource(R.drawable.kiefer);
             }
         });

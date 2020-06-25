@@ -49,8 +49,10 @@
             android:background="@color/category_intro"
             android:text="@string/category_intro" />
         <ImageView
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
             android:id="@+id/imageAndroid"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher_round"
