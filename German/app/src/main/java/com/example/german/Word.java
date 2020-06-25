@@ -3,10 +3,12 @@ package com.example.german;
 public class Word {
     private String mDefaultWord;
     private String mGermanWord;
-    public Word(String GermanWord,String defaultWord)
+    private int imageResource;
+    public Word(String GermanWord,String defaultWord,int imageResource)
     {
         this.mDefaultWord=defaultWord;
         this.mGermanWord=GermanWord;
+        this.imageResource=imageResource;
     }
     public String getdefaultWord()
     {
@@ -16,6 +18,10 @@ public class Word {
     public String getGermanWord()
     {
         return this.mGermanWord;
+    }
+    public int getImageResource()
+    {
+        return this.imageResource;
     }
 
 }

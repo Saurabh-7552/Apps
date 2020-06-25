@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -73,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(view.getContext(),"Getting to Introduction",Toast.LENGTH_SHORT);
                 Intent toIntro = new Intent(MainActivity.this,IntroActivity.class);
                 startActivity(toIntro);
+            }
+        });
+        ////////////////////////////////////////////////////////////////////////////
+        final ImageView myImage=(ImageView)findViewById(R.id.imageAndroid);
+        myImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myImage.setImageResource(R.drawable.kiefer);
             }
         });
 
