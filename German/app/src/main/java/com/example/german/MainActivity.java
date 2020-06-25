@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
           getDays.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View view) {
-                  Toast.makeText(view.getContext(),"Getting To Days",Toast.LENGTH_SHORT);
+                  Toast.makeText(view.getContext(),"Getting To Days",Toast.LENGTH_SHORT).show();
                   Intent toDayActivity =new Intent(MainActivity.this,DayActivity.class);
                   startActivity(toDayActivity);
               }
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         getIntro.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Getting to Introduction",Toast.LENGTH_SHORT);
+                Toast.makeText(view.getContext(),"Getting to Introduction",Toast.LENGTH_SHORT).show();
                 Intent toIntro = new Intent(MainActivity.this,IntroActivity.class);
                 startActivity(toIntro);
             }
@@ -81,8 +81,9 @@ public class MainActivity extends AppCompatActivity {
         myImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext()," Best Painting In German",Toast.LENGTH_LONG);
+                Toast.makeText(view.getContext()," Best Painting In German",Toast.LENGTH_SHORT).show();
                 myImage.setImageResource(R.drawable.kiefer);
+
             }
         });
 
