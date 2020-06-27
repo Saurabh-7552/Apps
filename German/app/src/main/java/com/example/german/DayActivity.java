@@ -15,7 +15,7 @@ public class DayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_list);
         List<Word> getDays=createList();
-        WordAdapter wordAdapter = new WordAdapter(this,getDays);
+        WordAdapter wordAdapter = new WordAdapter(this,getDays,R.color.category_days);
         ListView dayList =(ListView)findViewById(R.id.rootView);
         dayList.setAdapter(wordAdapter);
     }

@@ -10,4 +10,5 @@
     <color name="category_phrases">#000000</color>
     <color name="category_days">#ff0000</color>
     <color name="category_intro">#ffcc00</color>
+    <color name="background_image">#F6E193</color>
 </resources>

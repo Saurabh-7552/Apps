@@ -6,19 +6,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import java.util.List;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
-
-    public WordAdapter(@NonNull Activity context, List<Word> words)
+   private int color;
+    public WordAdapter(@NonNull Activity context, List<Word> words,int color)
     {
         super(context, 0,words);
+        this.color=color;
     }
 
     @NonNull
@@ -31,14 +34,21 @@ public class WordAdapter extends ArrayAdapter<Word> {
                     R.layout.layout_german, parent, false);
         }
         Word currentView = getItem(position);
-        TextView germansWord = (TextView)listView.findViewById(R.id.deutsch);
+        TextView germansWord = listView.findViewById(R.id.deutsch);
         assert currentView != null;
         germansWord.setText(currentView.getGermanWord());
 
-         TextView defaultWord = (TextView)listView.findViewById(R.id.englisch);
+         TextView defaultWord = listView.findViewById(R.id.englisch);
         defaultWord.setText(currentView.getdefaultWord());
-        ImageView wordImages=(ImageView)listView.findViewById(R.id.wordImage);
-        wordImages.setImageResource(currentView.getImageResource());
+        ImageView wordImages=listView.findViewById(R.id.wordImage);
+        if(wordImages==null) {
+            wordImages.setVisibility(View.GONE);//Layout is invisible without taking space GONE=8, INVISIBLE takes spaces
+        }
+        else {
+            wordImages.setImageResource(currentView.getImageResource());
+            int mColor = ContextCompat.getColor(getContext(),color);
+            wordImages.setBackgroundColor(mColor);
+        }
         return listView;
     }
 }

@@ -10,6 +10,11 @@ public class Word {
         this.mGermanWord=GermanWord;
         this.imageResource=imageResource;
     }
+    public Word(String GermanWord,String DefaultWord)
+    {
+        mDefaultWord=DefaultWord;
+        mGermanWord=GermanWord;
+    }
     public String getdefaultWord()
     {
         return this.mDefaultWord;

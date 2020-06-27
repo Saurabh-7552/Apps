@@ -15,8 +15,8 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_list);
         List<Word> getIntro =createList();
-        WordAdapter wordAdapter =new WordAdapter(this,getIntro);
-        ListView getListIntro =(ListView)findViewById(R.id.rootView);
+        WordAdapter wordAdapter =new WordAdapter(this,getIntro,R.color.category_intro);
+        ListView getListIntro =findViewById(R.id.rootView);
         getListIntro.setAdapter(wordAdapter);
     }
     private List<Word> createList()

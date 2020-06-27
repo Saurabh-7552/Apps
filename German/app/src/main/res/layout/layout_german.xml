@@ -6,34 +6,41 @@
     >
     <ImageView
         android:id="@+id/wordImage"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:src="@mipmap/ic_launcher_round"
-        android:scaleType="centerCrop"
+        android:scaleType="centerInside"
         android:layout_width="wrap_content"
+        android:background="@color/background_image"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"/>
+        android:layout_marginStart="8dp" />
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="6"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp">
     <TextView
         android:id="@+id/deutsch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="8dp"
+        android:layout_gravity="center_vertical"
         android:text="German"
-        android:textSize="16sp"
+        android:textAppearance="?android:textAppearanceMedium"
         android:textStyle="bold"
-        android:layout_marginLeft="16dp"
         />
     <TextView
         android:id="@+id/englisch"
+        android:layout_gravity="center_vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="English"
+        android:paddingStart="8dp"
         android:textSize="16sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="16dp"
         />
     </LinearLayout>
 

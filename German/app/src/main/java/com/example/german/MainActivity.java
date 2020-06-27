@@ -9,14 +9,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
          /////////////////////////////1/////////////////////////
-        TextView getNumbers =(TextView) findViewById(R.id.numbers);
+
+        TextView getNumbers = findViewById(R.id.numbers);
          getNumbers.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -26,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
              }
          });
          ////////////////////////////2///////////////////////////////////
-         TextView getFamilyMember =(TextView) findViewById(R.id.family);
+         TextView getFamilyMember =findViewById(R.id.family);
          getFamilyMember.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -36,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
              }
          });
          ///////////////////////////3//////////////////////////////////////
-         TextView getColors =(TextView) findViewById(R.id.colors);
+         TextView getColors = findViewById(R.id.colors);
          getColors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
               }
           });
         ////////////////////////////4/////////////////////////////////////
-         TextView getPhrases =(TextView)findViewById(R.id.phrases);
+         TextView getPhrases =findViewById(R.id.phrases);
          getPhrases.setOnClickListener(new View.OnClickListener(){
                public void onClick(View view)
                {
@@ -57,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
          });
         //////////////////////////////5////////////////////////////////////////
-        TextView getDays = (TextView) findViewById(R.id.Days);
+        TextView getDays =  findViewById(R.id.Days);
           getDays.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View view) {
@@ -67,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
               }
           });
           ////////////////////////////6//////////////////////////////////////////
-        TextView getIntro =(TextView)findViewById(R.id.Intro);
+        TextView getIntro =findViewById(R.id.Intro);
         getIntro.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -77,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         ////////////////////////////////////////////////////////////////////////////
-         final ImageView myImage=(ImageView)findViewById(R.id.imageAndroid);
+         final ImageView myImage=findViewById(R.id.imageAndroid);
         myImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

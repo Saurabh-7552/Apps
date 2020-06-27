@@ -18,8 +18,8 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_list);
         List<Word> getWords =createNumber();
-        WordAdapter arrayAdapter =new WordAdapter(this,getWords);
-        ListView listView =(ListView)findViewById(R.id.rootView);
+        WordAdapter arrayAdapter =new WordAdapter(this,getWords,R.color.category_numbers);
+        ListView listView =findViewById(R.id.rootView);
         listView.setAdapter(arrayAdapter);
     }
     private List<Word> createNumber()
