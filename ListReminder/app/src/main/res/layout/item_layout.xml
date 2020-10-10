@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:background="@color/tan_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/item1"
+            style="@style/itemStyle"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            tools:text="item1" />
+
+        <TextView
+            android:id="@+id/item2"
+            style="@style/itemStyle"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@id/item1"
+            android:layout_toRightOf="@id/item1"
+            tools:ignore="RelativeOverlap"
+            tools:text="item2" />
+
+        <CheckBox
+            style="@style/itemStyle"
+            android:layout_toLeftOf="@id/alarm"
+            android:paddingEnd="18dp"
+            android:paddingRight="18dp"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/alarm"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/alarm_clock" />
+    </RelativeLayout>
+
+</RelativeLayout>

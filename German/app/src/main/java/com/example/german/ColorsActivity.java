@@ -2,14 +2,17 @@ package com.example.german;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ColorsActivity extends AppCompatActivity {
-
+    MediaPlayer mSong;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +21,8 @@ public class ColorsActivity extends AppCompatActivity {
         WordAdapter colorAdapter =new WordAdapter(this,colors,R.color.category_colors);
         ListView colorList =findViewById(R.id.rootView);
         colorList.setAdapter(colorAdapter);
+
+
     }
     private List<Word> createList()
     {

@@ -4,6 +4,14 @@ public class Word {
     private String mDefaultWord;
     private String mGermanWord;
     private int imageResource;
+    private int soundResource;
+    public Word(String GermanWord,String defaultWord,int imageResource,int soundResource)
+    {
+        this.mDefaultWord=defaultWord;
+        this.mGermanWord=GermanWord;
+        this.imageResource=imageResource;
+        this.soundResource=soundResource;
+    }
     public Word(String GermanWord,String defaultWord,int imageResource)
     {
         this.mDefaultWord=defaultWord;
@@ -27,6 +35,9 @@ public class Word {
     public int getImageResource()
     {
         return this.imageResource;
+    }
+    public int getSoundResource(){
+        return this.soundResource;
     }
 
 }

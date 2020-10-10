@@ -7,4 +7,6 @@
     <string name="category_days">Days</string>
     <string name="category_intro">Introduction</string>
     <string name="category_alpha">Alphabet</string>
+    <string name="german">German</string>
+    <string name="english">English</string>
 </resources>

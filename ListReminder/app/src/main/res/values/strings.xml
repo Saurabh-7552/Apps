@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Remind Me!</string>
+    <string name="hints">Enter Items here!</string>
+    <string name="enter">Enter</string>
+    <string name="clear_all">Clear</string>
+    <string name="items_list">Items List</string>
+    <string name="history">History</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

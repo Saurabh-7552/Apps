@@ -38,7 +38,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         assert currentView != null;
         germansWord.setText(currentView.getGermanWord());
 
-         TextView defaultWord = listView.findViewById(R.id.englisch);
+        TextView defaultWord = listView.findViewById(R.id.englisch);
         defaultWord.setText(currentView.getdefaultWord());
         ImageView wordImages=listView.findViewById(R.id.wordImage);
         if(wordImages==null) {
