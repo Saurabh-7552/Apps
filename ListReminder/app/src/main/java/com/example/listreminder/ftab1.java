@@ -7,6 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,7 +22,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ftab1 extends Fragment {
-
+    ArrayList<Items> list = new ArrayList<>();
+    ArrayAdapter adapter;
+    int number = 0;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -36,7 +46,6 @@ public class ftab1 extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment ftab1.
      */
-    // TODO: Rename and change types and number of parameters
     public static ftab1 newInstance(String param1, String param2) {
         ftab1 fragment = new ftab1();
         Bundle args = new Bundle();
@@ -58,7 +67,37 @@ public class ftab1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ftab1, container, false);
+        final View mView = inflater.inflate(R.layout.fragment_ftab1, container, false);
+
+        Button btn = mView.findViewById(R.id.enter);     // get Button view from fragment_ftab1 layout
+        adapter = new ItemAdapter(getContext(), list);   // initialize ItemAdapter view
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {                   // On Clicking Enter button get String , add to arrayList and notify adapter to change
+                EditText edit = (EditText) mView.findViewById(R.id.itemsList);
+                String enteredString = edit.getText().toString();
+                if (enteredString.isEmpty())
+                    enteredString = "Empty!!";
+                list.add(new Items(enteredString, ++number));
+                edit.getText().clear();
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+        final ListView myList = mView.findViewById(R.id.mylist);
+        myList.setAdapter(adapter);                              //Setting adapter to ListView
+        
+
+        Button btn1 = mView.findViewById(R.id.clear);                         // On clicking CLear button all items cleared
+        btn1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                number = 0;
+                adapter.clear();
+            }
+        });
+        return mView;
     }
 }

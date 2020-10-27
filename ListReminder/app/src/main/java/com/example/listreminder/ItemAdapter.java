@@ -17,16 +17,15 @@ import androidx.annotation.Nullable;
 import java.util.List;
 
 public class ItemAdapter extends ArrayAdapter<Items> {
-    public ItemAdapter(Context context, List<Items> myList)
-    {
-        super(context,0,myList);
+    public ItemAdapter(Context context, List<Items> myList) {
+        super(context, 0, myList);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.item_layout, parent, false);
         }
@@ -39,16 +38,16 @@ public class ItemAdapter extends ArrayAdapter<Items> {
         nameTextView.setText(currentItem.getNumber());
         TextView numberTextView = (TextView) listItemView.findViewById(R.id.item2);
         numberTextView.setText(currentItem.getItem());
-        final ImageView alarmClock =listItemView.findViewById(R.id.alarm);
+        final ImageView alarmClock = listItemView.findViewById(R.id.alarm);
         alarmClock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent alarmIntent =new Intent(AlarmClock.ACTION_SET_ALARM);
-                alarmIntent.putExtra(AlarmClock.EXTRA_MESSAGE,currentItem.getItem()+"is to be done!");
-                alarmIntent.putExtra(AlarmClock.EXTRA_RINGTONE,AlarmClock.VALUE_RINGTONE_SILENT);
-                alarmIntent.putExtra(AlarmClock.EXTRA_VIBRATE,true);
+                Intent alarmIntent = new Intent(AlarmClock.ACTION_SET_ALARM);
+                alarmIntent.putExtra(AlarmClock.EXTRA_MESSAGE, currentItem.getItem() + "is to be done!");
+                alarmIntent.putExtra(AlarmClock.EXTRA_RINGTONE, AlarmClock.VALUE_RINGTONE_SILENT);
+                alarmIntent.putExtra(AlarmClock.EXTRA_VIBRATE, true);
                 if (alarmIntent.resolveActivity(getContext().getPackageManager()) != null)
-                getContext().startActivity(alarmIntent);
+                    getContext().startActivity(alarmIntent);
             }
         });
 

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -16,20 +15,20 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/items"
+            android:id="@+id/itemsList"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_weight="4"
             android:hint="@string/hints"
-            android:inputType="text"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="" />
 
         <Button
             android:id="@+id/enter"
-            android:layout_marginStart="10dp"
             style="@style/button_style"
+            android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginEnd="3dp"
             android:layout_marginRight="8dp"

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp"
     android:background="@color/tan_background">
 
@@ -16,6 +17,7 @@
             style="@style/itemStyle"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
+            android:gravity="center"
             tools:text="item1" />
 
         <TextView
@@ -25,10 +27,12 @@
             android:layout_marginLeft="8dp"
             android:layout_toEndOf="@id/item1"
             android:layout_toRightOf="@id/item1"
+            android:gravity="center"
             tools:ignore="RelativeOverlap"
             tools:text="item2" />
 
         <CheckBox
+            android:id="@+id/checkItem"
             style="@style/itemStyle"
             android:layout_toLeftOf="@id/alarm"
             android:paddingEnd="18dp"
@@ -37,10 +41,10 @@
 
         <ImageView
             android:id="@+id/alarm"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="16dp"
+            android:layout_marginRight="15dp"
             android:scaleType="centerCrop"
             android:src="@drawable/alarm_clock" />
     </RelativeLayout>
