@@ -4,6 +4,7 @@ public class Items {
     private String item;
     private Integer number;
 
+
     public Items(String item, int number) {
         this.item = item;
         this.number = number;
@@ -16,4 +17,10 @@ public class Items {
     public String getNumber() {
         return number.toString() + ".";
     }
+    public int getIntegerNumber()
+    {
+        return this.number;
+    }
+
+
 }

@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import java.util.List;
 
 public class ItemAdapter extends ArrayAdapter<Items> {
+    View mView;
     public ItemAdapter(Context context, List<Items> myList) {
         super(context, 0, myList);
     }
@@ -25,6 +26,7 @@ public class ItemAdapter extends ArrayAdapter<Items> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItemView = convertView;
+        mView=convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.item_layout, parent, false);
@@ -50,6 +52,7 @@ public class ItemAdapter extends ArrayAdapter<Items> {
                     getContext().startActivity(alarmIntent);
             }
         });
+
 
         return listItemView;
     }

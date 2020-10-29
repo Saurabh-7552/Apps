@@ -12,7 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -23,8 +25,9 @@ import java.util.ArrayList;
  */
 public class ftab1 extends Fragment {
     ArrayList<Items> list = new ArrayList<>();
-    ArrayAdapter adapter;
+    ItemAdapter adapter;
     int number = 0;
+    DataBaseHelper ItemDataBase;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -71,7 +74,7 @@ public class ftab1 extends Fragment {
 
         Button btn = mView.findViewById(R.id.enter);     // get Button view from fragment_ftab1 layout
         adapter = new ItemAdapter(getContext(), list);   // initialize ItemAdapter view
-
+        ItemDataBase = new DataBaseHelper(getContext());
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {                   // On Clicking Enter button get String , add to arrayList and notify adapter to change
@@ -80,6 +83,8 @@ public class ftab1 extends Fragment {
                 if (enteredString.isEmpty())
                     enteredString = "Empty!!";
                 list.add(new Items(enteredString, ++number));
+                if (!(ItemDataBase.Insert(enteredString, number)))
+                    Toast.makeText(getContext(), "Cannot Inserted!!Sorry!!", Toast.LENGTH_SHORT).show();
                 edit.getText().clear();
                 adapter.notifyDataSetChanged();
             }
@@ -87,7 +92,7 @@ public class ftab1 extends Fragment {
 
         final ListView myList = mView.findViewById(R.id.mylist);
         myList.setAdapter(adapter);                              //Setting adapter to ListView
-        
+
 
         Button btn1 = mView.findViewById(R.id.clear);                         // On clicking CLear button all items cleared
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +103,26 @@ public class ftab1 extends Fragment {
                 adapter.clear();
             }
         });
+        /////////////////////////////Testing////////////////////////
+        myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ImageView imageView = view.findViewById(R.id.delete);
+                final int position2 =position;
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Items items=list.get(position2);
+                        list.remove(position2);
+                        if(adapter!=null)
+                        adapter.notifyDataSetChanged();
+                        number=items.getIntegerNumber()+1;
+                    }
+                });
+
+            }
+        });
+        ////////////////////////////////////////////////////////////////////////
         return mView;
     }
 }

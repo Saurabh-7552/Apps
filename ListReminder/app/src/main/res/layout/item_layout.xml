@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:background="@color/tan_background">
+    android:layout_height="55dp"
+    android:layout_margin="18dp"
+    android:padding="4dp"
+    app:cardBackgroundColor="@color/tan_background"
+    app:cardCornerRadius="55dp"
+    app:cardElevation="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="?android:attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/item1"
             style="@style/itemStyle"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:gravity="center"
             tools:text="item1" />
 
         <TextView
             android:id="@+id/item2"
             style="@style/itemStyle"
+            android:layout_centerVertical="true"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_toEndOf="@id/item1"
@@ -34,19 +39,34 @@
         <CheckBox
             android:id="@+id/checkItem"
             style="@style/itemStyle"
+            android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/alarm"
-            android:paddingEnd="18dp"
-            android:paddingRight="18dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
             android:id="@+id/alarm"
             android:layout_width="40dp"
             android:layout_height="32dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/delete"
+            android:layout_centerVertical="true"
             android:scaleType="centerCrop"
             android:src="@drawable/alarm_clock" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/trash" />
     </RelativeLayout>
 
-</RelativeLayout>
+</androidx.cardview.widget.CardView>
