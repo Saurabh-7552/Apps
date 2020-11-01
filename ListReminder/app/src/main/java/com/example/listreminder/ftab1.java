@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -103,7 +104,7 @@ public class ftab1 extends Fragment {
                 adapter.clear();
             }
         });
-        /////////////////////////////Testing////////////////////////
+        /////////////////////////////Number state logic should be solved////////////////////////
         myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -116,9 +117,13 @@ public class ftab1 extends Fragment {
                         list.remove(position2);
                         if(adapter!=null)
                         adapter.notifyDataSetChanged();
+                        if(list==null)
+                            number=0;
+                        else
                         number=items.getIntegerNumber()+1;
                     }
                 });
+
 
             }
         });
