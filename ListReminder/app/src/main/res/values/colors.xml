@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#696969</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#434141</color>
+    <color name="colorAccent">#454141</color>
     <color name="tan_background">#FFF7DA</color>
     <color name="white">#ffffff</color>
+    <color name="myColor">#A39A99</color>
 </resources>
