@@ -1,0 +1,11 @@
+com/example/quakedec/QueryUtils.java
+ com.example.quakedec.QueryUtils
+com/example/quakedec/ListAdapter.java
+ com.example.quakedec.ListAdapter
+com/example/quakedec/BuildConfig.java
+ com.example.quakedec.BuildConfig
+com/example/quakedec/EarthQuakeData.java
+ com.example.quakedec.EarthQuakeData
+com/example/quakedec/MainActivity.java
+ com.example.quakedec.MainActivity
+ com.example.quakedec.MainActivity$1
