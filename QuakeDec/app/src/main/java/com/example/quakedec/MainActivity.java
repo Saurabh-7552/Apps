@@ -4,59 +4,139 @@ package com.example.quakedec;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-   private ListAdapter listAdapter;
-   private List<EarthQuakeData> earthQuakeDataList;
-   private QueryUtils queryUtils;
+    NavigationView navigationView;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    DrawerLayout drawerLayout;
+
+    String myUrl = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02";
+    StringBuilder jsonResponseBuilder = new StringBuilder();
+    QueryUtils queryUtils;
+    URL url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar_main);
+        setSupportActionBar(toolbar);
+        navigationView = findViewById(R.id.navmenu_main);
+        drawerLayout = findViewById(R.id.drawer);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        navigationView.setNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.menu_home:
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    break;
+                case R.id.menu_About:
+                    Intent intent = new Intent(this, About.class);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    startActivity(intent);
+                    break;
+                case R.id.menu_Setting: //Intent Setting
+                    break;
+                default:
+            }
+            return true;
+        });
 
-        queryUtils =new QueryUtils();
-        earthQuakeDataList=queryUtils.getList();
-        listAdapter =new ListAdapter(MainActivity.this,earthQuakeDataList);
+        queryUtils = new QueryUtils();
+        try {
+            url = new URL(myUrl);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        MySyncTask mySyncTask = new MySyncTask();
+        mySyncTask.execute(url);
 
-        ListView earthquakeListView = (ListView) findViewById(R.id.list);
-        earthquakeListView.setAdapter(listAdapter);
+    }
 
-        earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    private class MySyncTask extends AsyncTask<URL, Void, String> {
+        @Override
+        protected String doInBackground(URL... urls) {
+            try {
+                HttpURLConnection httpURLConnection = (HttpURLConnection) urls[0].openConnection();
+                httpURLConnection.setRequestMethod("GET");
+                httpURLConnection.setReadTimeout(10000);
+                httpURLConnection.setConnectTimeout(15000);
+                httpURLConnection.connect();
+                if (httpURLConnection.getResponseCode() == 200) {
+                    InputStreamReader inputStreamReader = new InputStreamReader(httpURLConnection.getInputStream(), Charset.forName("UTF-8"));
+                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                    String line = bufferedReader.readLine();
+                    while (line != null) {
+                        jsonResponseBuilder.append(line);
+                        line = bufferedReader.readLine();
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return jsonResponseBuilder.toString();
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            List<EarthQuakeData> earthQuakeDataList = queryUtils.getList(s);
+            ListAdapter listAdapter = new ListAdapter(MainActivity.this, earthQuakeDataList);
+
+            ListView earthquakeListView = (ListView) findViewById(R.id.list);
+            earthquakeListView.setAdapter(listAdapter);
+
+            earthquakeListView.setOnItemClickListener((parent, view, position, id) -> {
                 try {
-                    JSONArray jsonArray =queryUtils.getRoot();
-                    JSONObject jsonObject=jsonArray.getJSONObject(position);
-                    JSONObject propertyObject=jsonObject.getJSONObject("properties");
-                    String url=propertyObject.getString("url");
+                    JSONArray jsonArray = queryUtils.getRoot();
+                    JSONObject jsonObject = jsonArray.getJSONObject(position);
+                    JSONObject propertyObject = jsonObject.getJSONObject("properties");
+                    String url = propertyObject.getString("url");
                     Intent webSiteIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(webSiteIntent);
                 } catch (JSONException e) {
                     e.printStackTrace();
-                }
-                catch (ActivityNotFoundException e)
-                {
-                    Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
 
-            }
-        });
+            });
+
+            super.onPostExecute(s);
+        }
 
     }
+
 
     @Override
     protected void onDestroy() {

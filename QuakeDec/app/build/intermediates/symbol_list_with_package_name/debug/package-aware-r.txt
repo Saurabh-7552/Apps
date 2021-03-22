@@ -1021,6 +1021,7 @@ color material_slider_halo_color
 color material_slider_inactive_tick_marks_color
 color material_slider_inactive_track_color
 color material_slider_thumb_color
+color menu_header
 color mtrl_bottom_nav_colored_item_tint
 color mtrl_bottom_nav_colored_ripple_color
 color mtrl_bottom_nav_item_tint
@@ -1100,6 +1101,7 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color tabColor
 color teal_200
 color teal_700
 color test_mtrl_calendar_day
@@ -1554,12 +1556,19 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable divide_mathematical_sign
+drawable edit_text_selector
+drawable flag_geological_survey
+drawable ic_baseline_auto_stories_24
+drawable ic_baseline_home_24
+drawable ic_baseline_settings_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable map
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
 drawable material_ic_edit_black_24dp
@@ -1567,6 +1576,7 @@ drawable material_ic_keyboard_arrow_left_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable microphone
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1589,9 +1599,11 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable round_button
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable usgs
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1677,6 +1689,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id blocking
+id body
 id bottom
 id bounce
 id buttonPanel
@@ -1733,6 +1746,8 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer
+id drawer_about
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -1773,6 +1788,7 @@ id ignore
 id ignoreRequest
 id image
 id info
+id introduction
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1789,6 +1805,9 @@ id list
 id listMode
 id list_item
 id masked
+id menu_About
+id menu_Setting
+id menu_home
 id message
 id middle
 id mini
@@ -1822,6 +1841,8 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id navigation_header_container
+id navmenu_about
+id navmenu_main
 id never
 id noScroll
 id none
@@ -1945,6 +1966,8 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar_about
+id toolbar_main
 id top
 id topPanel
 id touch_outside
@@ -2028,6 +2051,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2045,6 +2069,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout drawer_header
 layout earthquakeview
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
@@ -2098,9 +2123,12 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu icon_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string About
+string Setting
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2136,12 +2164,17 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string close
 string date_format
+string enter
+string enter_your_country
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string get_your_details
 string hide_bottom_view_on_scroll_behavior
+string home
 string icon_content_description
 string item_view_role_description
 string material_slider_range_end
@@ -2181,12 +2214,15 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string open
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
+string slash
+string speech
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -2881,6 +2917,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style button_style
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
