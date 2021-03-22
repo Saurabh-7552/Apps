@@ -37,14 +37,11 @@ public class HistoryActivity extends AppCompatActivity {
         androidx.appcompat.widget.Toolbar toolbars = findViewById(R.id.custom_toolbar_history);
         setSupportActionBar(toolbars);
 
-
         drawerLayout = findViewById(R.id.history_drawer);
         navigationView = findViewById(R.id.nav_header_history);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbars, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-
-
 
 
         mClearHistory = findViewById(R.id.clear_history);
