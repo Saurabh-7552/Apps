@@ -1073,6 +1073,7 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color myBlack
 color myColor
 color notification_action_color_filter
 color notification_icon_bg_color
@@ -1600,6 +1601,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable round_button
+drawable seismograph
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1748,6 +1750,7 @@ id dragStart
 id dragUp
 id drawer
 id drawer_about
+id drawer_setting
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -1843,6 +1846,7 @@ id multiply
 id navigation_header_container
 id navmenu_about
 id navmenu_main
+id navmenu_setting
 id never
 id noScroll
 id none
@@ -1968,6 +1972,7 @@ id title_template
 id toggle
 id toolbar_about
 id toolbar_main
+id toolbar_setting
 id top
 id topPanel
 id touch_outside
@@ -2053,6 +2058,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_about
 layout activity_main
+layout activity_setting
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2215,6 +2221,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string open
+string parameters
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

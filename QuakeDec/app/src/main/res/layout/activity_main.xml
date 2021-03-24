@@ -13,89 +13,48 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_main"
-            android:layout_width="match_parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tabColor"
+        app:title="Earthquake Data"
+        app:titleTextColor="@color/white" />
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/tabColor"
-            app:title="Earthquake Data"
-            app:titleTextColor="@color/white" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="102dp"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight="4"
-                android:orientation="vertical">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edit_text_selector"
-                    android:gravity="center"
-                    android:hint="@string/enter_your_country"
-                    android:importantForAutofill="no"
-                    android:inputType="text"
-                    android:textSize="23sp" />
-
-                <Button
-                    style="@style/button_style"
-                    android:layout_marginTop="18dp"
-                    android:text="@string/enter" />
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="7dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/slash"
-                android:src="@drawable/divide_mathematical_sign" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_weight="2"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginBottom="5dp"
-                    android:contentDescription="@string/speech"
-                    android:src="@drawable/microphone" />
-
-                <Button
-                    style="@style/button_style"
-                    android:text="@string/enter" />
-            </LinearLayout>
-        </LinearLayout>
+            android:layout_margin="16dp"
+            android:textSize="45sp"
+            android:text="Places"
+            android:textColor="#000000" />
 
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="8dp"
             android:divider="@null"
             android:orientation="vertical" />
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:text="*Shown data is from Start-date:01-01-2014 &amp; End-date:02-01-2014"
+            android:textStyle="italic"/>
     </LinearLayout>
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navmenu_main"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/drawer_header"
+        app:itemIconTint="@color/menu_header"
         app:menu="@menu/icon_menu" />
+
+
 </androidx.drawerlayout.widget.DrawerLayout>

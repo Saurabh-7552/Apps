@@ -1,5 +1,7 @@
 com/example/quakedec/QueryUtils.java
  com.example.quakedec.QueryUtils
+com/example/quakedec/setting.java
+ com.example.quakedec.setting
 com/example/quakedec/ListAdapter.java
  com.example.quakedec.ListAdapter
 com/example/quakedec/About.java

@@ -31,19 +31,22 @@ public class About extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.navmenu_about);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_about);
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
+        actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         navigationView.setNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.menu_home:
-                    Intent intent = new Intent(this, MainActivity.class);
+                    Intent homeIntent = new Intent(this, MainActivity.class);
                     drawerLayout.closeDrawer(GravityCompat.START);
-                    startActivity(intent);
+                    startActivity(homeIntent);
                     break;
                 case R.id.menu_About:
                     drawerLayout.closeDrawer(GravityCompat.START);
                     break;
-                case R.id.menu_Setting: //Intent Setting
+                case R.id.menu_Setting: Intent settingIntent = new Intent(this, setting.class);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    startActivity(settingIntent);
                     break;
                 default:
             }

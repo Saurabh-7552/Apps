@@ -40,4 +40,5 @@
     <color name="magnitude10plus">#C03823</color>
     <color name="tabColor">#632BCC</color>
     <color name="menu_header">#6106DF</color>
+    <color name="myBlack">#000000</color>
 </resources>

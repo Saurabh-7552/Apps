@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navmenu_main);
         drawerLayout = findViewById(R.id.drawer);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
+        actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         navigationView.setNavigationItemSelectedListener(item -> {
@@ -57,11 +58,13 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     break;
                 case R.id.menu_About:
-                    Intent intent = new Intent(this, About.class);
+                    Intent aboutIntent = new Intent(this, About.class);
                     drawerLayout.closeDrawer(GravityCompat.START);
-                    startActivity(intent);
+                    startActivity(aboutIntent);
                     break;
-                case R.id.menu_Setting: //Intent Setting
+                case R.id.menu_Setting:  Intent settingIntent = new Intent(this, setting.class);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    startActivity(settingIntent);
                     break;
                 default:
             }

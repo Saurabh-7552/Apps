@@ -20,6 +20,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.QuakeDec" >
+        <activity android:name="com.example.quakedec.setting" />
         <activity android:name="com.example.quakedec.About" />
         <activity android:name="com.example.quakedec.MainActivity" >
             <intent-filter>
