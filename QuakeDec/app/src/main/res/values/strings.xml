@@ -12,5 +12,6 @@
 
     <string name="close">Close</string>
     <string name="parameters">Parameters</string>
+    <string name="time">YYYY-MM-DD</string>
 
 </resources>

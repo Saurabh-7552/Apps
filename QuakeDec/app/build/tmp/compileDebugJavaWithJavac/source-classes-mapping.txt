@@ -1,18 +1,18 @@
-com/example/quakedec/QueryUtils.java
- com.example.quakedec.QueryUtils
-com/example/quakedec/setting.java
- com.example.quakedec.setting
-com/example/quakedec/ListAdapter.java
- com.example.quakedec.ListAdapter
-com/example/quakedec/About.java
- com.example.quakedec.About
 com/example/quakedec/BuildConfig.java
  com.example.quakedec.BuildConfig
+com/example/quakedec/USGSClass.java
+ com.example.quakedec.USGSClass
+com/example/quakedec/About.java
+ com.example.quakedec.About
+com/example/quakedec/setting.java
+ com.example.quakedec.setting
+com/example/quakedec/QueryUtils.java
+ com.example.quakedec.QueryUtils
+com/example/quakedec/ListAdapter.java
+ com.example.quakedec.ListAdapter
 com/example/quakedec/EarthQuakeData.java
  com.example.quakedec.EarthQuakeData
 com/example/quakedec/MainActivity.java
  com.example.quakedec.MainActivity
  com.example.quakedec.MainActivity$1
  com.example.quakedec.MainActivity$MySyncTask
-com/example/quakedec/USGSClass.java
- com.example.quakedec.USGSClass

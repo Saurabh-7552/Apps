@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
     DrawerLayout drawerLayout;
 
-    String myUrl = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02";
+    String startDate = null;
+    String endDate = null;
     StringBuilder jsonResponseBuilder = new StringBuilder();
     QueryUtils queryUtils;
     URL url;
@@ -70,16 +71,30 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
+        Intent intent = getIntent();
+        startDate = intent.getStringExtra("IntentStartDate");
+        endDate = intent.getStringExtra("IntentEndDate");
 
-        queryUtils = new QueryUtils();
         try {
-            url = new URL(myUrl);
+            url = new URL(getURLString(startDate,endDate));
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+        queryUtils = new QueryUtils();
         MySyncTask mySyncTask = new MySyncTask();
         mySyncTask.execute(url);
 
+    }
+
+    private String getURLString(String startDate, String endDate) {
+        if(startDate==null && endDate == null)
+        {
+            return "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02";
+        }
+        else
+        {
+            return "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime="+startDate+"&endtime="+endDate;
+        }
     }
 
     private class MySyncTask extends AsyncTask<URL, Void, String> {

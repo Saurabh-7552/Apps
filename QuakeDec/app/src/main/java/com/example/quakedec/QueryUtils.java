@@ -27,10 +27,7 @@ public class QueryUtils {
                 String place = propertyObject.getString("place");
                 Double magnitude = propertyObject.getDouble("mag");
                 long time = propertyObject.getLong("time");
-                Date date = new Date(time);
-                SimpleDateFormat dateFormatter = new SimpleDateFormat("MMM DD, yyyy");
-                String dateToDisplay = dateFormatter.format(date);
-                myList.add(new EarthQuakeData(magnitude, place, dateToDisplay));
+                myList.add(new EarthQuakeData(magnitude, place, time));
             }
         } catch (
                 JSONException e) {

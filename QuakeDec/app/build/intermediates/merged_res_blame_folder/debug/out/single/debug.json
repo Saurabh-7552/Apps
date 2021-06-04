@@ -8,12 +8,12 @@
         "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
         "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_button.xml.flat",
         "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\src\\main\\res\\drawable\\round_button.xml"
+    },
+    {
+        "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
@@ -84,16 +84,16 @@
         "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
+        "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
         "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_home_24.png.flat",
         "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_home_24.png"
-    },
-    {
-        "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\layout_drawer_header.xml.flat",
@@ -168,12 +168,12 @@
         "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_settings_24.png"
     },
     {
-        "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_settings_24.png.flat",
-        "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_settings_24.png"
-    },
-    {
         "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_settings_24.png.flat",
+        "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_settings_24.png"
     },
     {
         "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_auto_stories_24.png.flat",
@@ -184,12 +184,12 @@
         "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
         "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_home_24.png.flat",
         "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_home_24.png"
+    },
+    {
+        "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "E:\\GITHUB\\Apps\\QuakeDec\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "E:\\GITHUB\\Apps\\QuakeDec\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_home_24.png.flat",
