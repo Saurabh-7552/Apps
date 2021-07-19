@@ -1,6 +1,6 @@
 # QuakeDec 
 
-## Retrieve Earthquake data from USGS website([USGS Website](https://www.usgs.gov/)) through http request and parse that retrieve JSON format
+## An earthquake predection application where the prediction is based on seismic data and date is retrived from USGS([USGS Website](https://www.usgs.gov/)) API call.
 
 ![Menu of App](https://github.com/Saurabh-7552/Apps/blob/master/QuakeDec/1.jpg)
 ![ Drawer](https://github.com/Saurabh-7552/Apps/blob/master/QuakeDec/2.jpg)
