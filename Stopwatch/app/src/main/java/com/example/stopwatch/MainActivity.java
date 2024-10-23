@@ -1,19 +1,24 @@
 package com.example.stopwatch;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private int Seconds = 0;
     private Boolean Running = false, wasRunning = false;
     private TextView timeTextView;
+    private TextView currentTime;
 
     @Override
     protected void onResume() {
@@ -28,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         Button startButton = findViewById(R.id.startButton);
         Button stopButton = findViewById(R.id.stopButton);
         Button resetButton = findViewById(R.id.resetButton);
+        currentTime= findViewById(R.id.currentTime);
 
         resetButton.setOnClickListener(v -> {
             Running = false;
@@ -52,6 +59,19 @@ public class MainActivity extends AppCompatActivity {
         stopButton.setOnClickListener(v -> Running = false);
         startButton.setOnClickListener(v -> Running = true);
         runTime();
+        currentTime();
+
+    }
+    public void currentTime()
+    {
+        final Handler someHandler = new Handler(getMainLooper());
+        someHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                currentTime.setText(new SimpleDateFormat("HH:mm:ss", Locale.US).format(new Date()));
+                someHandler.postDelayed(this, 1000);
+            }
+        }, 10);
     }
 
     public void runTime() {

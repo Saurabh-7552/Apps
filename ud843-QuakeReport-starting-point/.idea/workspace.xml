@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2ae2f134-5c5f-42b3-8746-7290fe4a4603" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/java/com/example/listreminder/HistoryActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/drawable-v24/imgheader.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/drawable/edit_text_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/drawable/home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/layout/activity_history.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/layout/nav_header.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/layout/wrapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/layout/wrapper2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/menu/nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuakeDec/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuakeDec/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuakeDec/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuakeDec/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuakeDec/.idea/markdown-navigator-enh.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuakeDec/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuakeDec/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuakeDec/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/java/com/example/listreminder/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/java/com/example/listreminder/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/java/com/example/listreminder/PageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/java/com/example/listreminder/PageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/java/com/example/listreminder/ftab2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/res/layout/fragment_ftab1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/layout/fragment_ftab1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/res/layout/fragment_ftab2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ListReminder/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListReminder/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ListReminder/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1jv2soqvHz96vsa570iLHzHoVE1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.do.not.copy.http.proxy.settings.to.gradle" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ae2f134-5c5f-42b3-8746-7290fe4a4603" name="Default Changelist" comment="" />
+      <created>1604670453572</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604670453572</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="140" key="#HTTP_Proxy" timestamp="1604674996352">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="140" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1604674996352" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1604675344052">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1604675344052" />
+    <state x="550" y="167" key="FileChooserDialogImpl" timestamp="1604672749232">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="550" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604672749232" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1604675138228">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604675138228" />
+  </component>
+</project>
