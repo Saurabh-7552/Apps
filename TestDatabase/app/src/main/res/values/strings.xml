@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">TestDatabase</string>
-    <string name="enter_name">Enter name</string>
-    <string name="enter_surname">Enter Surname</string>
-    <string name="enter_marks">Enter Marks</string>
-</resources>
